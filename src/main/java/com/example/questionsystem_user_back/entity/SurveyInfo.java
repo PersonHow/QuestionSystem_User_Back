@@ -32,6 +32,12 @@ public class SurveyInfo {
 	
 	@Column(name = "survey_endtime")
 	private LocalDate surveyEndTime;
+	
+	@Column(name = "survey_question")
+	private String surveyQuestion;
+	
+	@Column(name = "survey_answer")
+	private String surveyAnswer;
 
 	public SurveyInfo() {
 		
@@ -84,6 +90,25 @@ public class SurveyInfo {
 	public void setSurveyEndTime(LocalDate surveyEndTime) {
 		this.surveyEndTime = surveyEndTime;
 	}
+
+	public String getSurveyQuestion() {
+		return surveyQuestion;
+	}
+
+	public void setSurveyQuestion(String surveyQuestion) {
+		this.surveyQuestion = surveyQuestion;
+	}
+
+	public String getSurveyAnswer() {
+		return surveyAnswer;
+	}
+
+	public void setSurveyAnswer(String surveyAnswer) {
+		this.surveyAnswer = surveyAnswer;
+	}
+
+	
+	
 	
 	
 }

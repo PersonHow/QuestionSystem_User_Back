@@ -3,7 +3,9 @@ package com.example.questionsystem_user_back.vo;
 import java.util.List;
 
 import com.example.questionsystem_user_back.entity.SurveyInfo;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SurveyInfoResponse {
 
 	private SurveyInfo surveyInfo;
@@ -14,6 +16,11 @@ public class SurveyInfoResponse {
 	
 	public SurveyInfoResponse() {
 		
+	}
+	
+	public SurveyInfoResponse(SurveyInfo surveyInfo,String message) {
+		this.surveyInfo = surveyInfo;
+		this.message = message;
 	}
 	
 	public SurveyInfoResponse(String message) {

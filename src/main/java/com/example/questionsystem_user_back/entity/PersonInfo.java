@@ -20,11 +20,11 @@ public class PersonInfo {
 	@Column(name = "name")
 	private String name;
 	
-	@Column(name = "sex")
-	private String sex;
-	
 	@Column(name = "phone")
 	private Integer phone;
+	
+	@Column(name = "age")
+	private Integer age;
 	
 	@Column(name = "survey_num")
 	private String surveyNum;
@@ -33,10 +33,10 @@ public class PersonInfo {
 		
 	}
 	
-	public PersonInfo(String email, String name, String sex, Integer phone, String surveyNum) {
+	public PersonInfo(String email, String name,  Integer phone,Integer age, String surveyNum) {
 		this.email = email;
 		this.name = name;
-		this.sex = sex;
+		this.age = age;
 		this.phone = phone;
 		this.surveyNum = surveyNum;
 	}
@@ -59,13 +59,6 @@ public class PersonInfo {
 		this.name = name;
 	}
 
-	public String getSex() {
-		return sex;
-	}
-
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
 
 	public Integer getPhone() {
 		return phone;
@@ -81,6 +74,14 @@ public class PersonInfo {
 
 	public void setSurveyNum(String surveyNum) {
 		this.surveyNum = surveyNum;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 	
 	

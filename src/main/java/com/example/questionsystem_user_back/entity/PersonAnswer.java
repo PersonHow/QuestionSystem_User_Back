@@ -1,5 +1,8 @@
 package com.example.questionsystem_user_back.entity;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -37,6 +40,10 @@ public class PersonAnswer {
 		
 		@Column(name = "user5_ans")
 		private String user5Ans;
+		
+		@Column(name = "time")
+		private LocalDateTime time;
+		
 		
 		public PersonAnswer() {
 			
@@ -97,6 +104,15 @@ public class PersonAnswer {
 		public void setUser5Ans(String user5Ans) {
 			this.user5Ans = user5Ans;
 		}
+
+		public LocalDateTime getTime() {
+			return time;
+		}
+
+		public void setTime(LocalDateTime time) {
+			this.time = time;
+		}
+
 		
 		
 }
